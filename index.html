@@ -29,8 +29,39 @@
                     <span id="score-display" class="value">0</span>
                 </div>
                 <div class="hud-item">
+                    <span class="label">Capacity</span>
+                    <span id="capacity-display" class="value">0/10</span>
+                </div>
+                <div class="hud-item">
+                    <span class="label">Health</span>
+                    <span id="health-display" class="value">❤️❤️❤️</span>
+                </div>
+                <div class="hud-item">
                     <button id="pull-up-btn" class="btn-small">Pull Up</button>
                 </div>
+            </div>
+
+            <!-- Shop Screen -->
+            <div id="shop-screen" class="screen hidden">
+                <h2>The Blacksmith</h2>
+                <p class="subtitle">Banked Gold: <span id="bank-gold">0</span></p>
+
+                <div class="shop-container">
+                    <div class="shop-item">
+                        <h3>Bucket Capacity</h3>
+                        <p>Carry more gold.</p>
+                        <p>Current: <span id="shop-cap-current">10</span></p>
+                        <button id="btn-buy-cap" class="btn-shop">Upgrade (<span id="cost-cap">100</span>)</button>
+                    </div>
+                    <div class="shop-item">
+                        <h3>Rope Length</h3>
+                        <p>Go deeper.</p>
+                        <p>Current: <span id="shop-depth-current">50m</span></p>
+                        <button id="btn-buy-depth" class="btn-shop">Upgrade (<span id="cost-depth">100</span>)</button>
+                    </div>
+                </div>
+
+                <button id="btn-close-shop" class="btn-primary" style="margin-top: 2rem;">Go to Well</button>
             </div>
 
             <!-- Start Screen -->
@@ -38,6 +69,7 @@
                 <h1>The Wishing Well</h1>
                 <p class="subtitle">Descend into the depths. Collect the gold.</p>
                 <button id="start-btn" class="btn-primary">Drop Bucket</button>
+                <button id="open-shop-btn" class="btn-small" style="margin-top: 1rem;">Visit Shop</button>
                 <p class="instructions">Move Mouse/Finger to guide the bucket.</p>
             </div>
 
