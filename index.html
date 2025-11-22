@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wishing Well: The Descent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <!-- HUD -->
+            <div id="hud" class="hidden">
+                <div class="hud-item">
+                    <span class="label">Depth</span>
+                    <span id="depth-display" class="value">0m</span>
+                </div>
+                <div class="hud-item">
+                    <span class="label">Gold</span>
+                    <span id="score-display" class="value">0</span>
+                </div>
+                <div class="hud-item">
+                    <button id="pull-up-btn" class="btn-small">Pull Up</button>
+                </div>
+            </div>
+
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active">
+                <h1>The Wishing Well</h1>
+                <p class="subtitle">Descend into the depths. Collect the gold.</p>
+                <button id="start-btn" class="btn-primary">Drop Bucket</button>
+                <p class="instructions">Move Mouse/Finger to guide the bucket.</p>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="screen hidden">
+                <h2 id="game-over-title">Well Done</h2>
+                <p>Gold Collected: <span id="final-score">0</span></p>
+                <p>Max Depth: <span id="final-depth">0m</span></p>
+                <button id="restart-btn" class="btn-primary">Drop Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
