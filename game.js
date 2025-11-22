@@ -345,6 +345,17 @@ class Game {
 
         this.ui.buyCapBtn.addEventListener('click', () => this.shop.buyCapacity());
         this.ui.buyDepthBtn.addEventListener('click', () => this.shop.buyDepth());
+
+        document.getElementById('home-btn').addEventListener('click', () => this.goHome());
+    }
+
+    goHome() {
+        this.state = 'MENU';
+        this.ui.gameOverScreen.classList.add('hidden');
+        this.ui.gameOverScreen.classList.remove('active');
+        this.ui.startScreen.classList.remove('hidden');
+        this.ui.startScreen.classList.add('active');
+        this.ui.hud.classList.add('hidden');
     }
 
     resize() {
